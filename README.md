@@ -39,7 +39,7 @@ terraform init
 terraform plan
 
 
-### 4. Apply Infrastructure (Create ACK Cluster)
+### 4. Apply Infrastructure
 
 terraform apply
 
