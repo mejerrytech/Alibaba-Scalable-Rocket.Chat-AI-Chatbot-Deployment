@@ -23,12 +23,10 @@ This project automates the deployment of a scalable **Rocket.Chat AI chatbot** o
 
 ### 1. Clone the Repository
 
-```bash
 git clone https://github.com/your-org/Alibaba-Scalable-Rocket.Chat-AI-Chatbot-Deployment.git
 cd Alibaba-Scalable-Rocket.Chat-AI-Chatbot-Deployment
 
 ---
-
 ##2. Configure Terraform Variables
 
 Edit terraform.tfvars to set your Alibaba Cloud configuration:

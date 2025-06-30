@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  rocketchat:
+    image: rocketchat/rocket.chat:latest
+    restart: always
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/rocketchat
+      - ROOT_URL=http://${ECS_PUBLIC_IP}:3000
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4.4
+    restart: always
+    volumes:
+      - ./data/db:/data/db
+
+  chatbot:
+    build: ./chatbot
+    restart: always
+    ports:
+      - "5005:5005"
+    env_file:
+      - ./chatbot/.env
