@@ -27,23 +27,26 @@ git clone https://github.com/your-org/Alibaba-Scalable-Rocket.Chat-AI-Chatbot-De
 cd Alibaba-Scalable-Rocket.Chat-AI-Chatbot-Deployment
 
 ---
-##2. Configure Terraform Variables
+---
+### 2. Initialize Terraform
 
-Edit terraform.tfvars to set your Alibaba Cloud configuration:
-
-region       = "cn-beijing"
-access_key   = "your_access_key"
-secret_key   = "your_secret_key"
-instance_type = "ecs.g6.large"
-
-
-##3. Initialize and Apply Terraform
 terraform init
+
+
+### 3. Plan Infrastructure
+
+
 terraform plan
+
+
+### 4. Apply Infrastructure (Create ACK Cluster)
+
 terraform apply
 
 
-###Outputs
+
+
+### 5. Outputs
 
 Terraform will show:
 
